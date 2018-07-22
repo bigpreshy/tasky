@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="lib/onsen/css/onsenui.css"/>
+	<link rel="stylesheet" type="text/css" href="lib/onsen/css/onsen-css-components.css"/>
+	<script src="lib/onsen/js/onsenui.js"></script>
+
+
+  <style>
+    .center{
+      color:#ce0b35;
+
+    }
+
+   #menu {
+    background-color: white;
+   }
+   .everything {
+    background-color: #ce0b35;
+   }
+    
+    .dope {
+     background-color:#e8b3bf;
+
+    }
+    .ajuma {
+      color:black;
+    }
+
+
+  </style>
+</head>
+<body>
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="160px" collapse swipeable>
+    <ons-page>
+      <ons-list class = "dope">
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('add.html')" tappable>
+          Add Task
+        </ons-list-item>
+      
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<ons-template id="home.html">
+  <ons-page id = "home">
+    <ons-toolbar class = "everything">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center" style="color: white">
+        Mytasky
+      </div>
+    </ons-toolbar>
+    <ons-list id="Ajuma" style = "color: black; " >
+    <ons-list-item class = 'ajuma'>Item A</ons-list-item>
+    </ons-list>
+
+    <ons-fab position = "bottom right" background-color = "blue" onclick= "fn.load('add.html')">
+      <ons-icon icon = "md-plus" color = "white"></ons-icons>
+    </ons-fab>
+  </ons-page>
+</ons-template>
+
+<ons-template id="add.html">
+  <ons-page>
+    <ons-toolbar class = "everything">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        Add Tasks
+      </div>
+    </ons-toolbar>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <p>
+        <ons-input id= "item" style= "width:84%;  border-bottom-style: solid; border-bottom-width: 1px;">
+          
+        </ons-input> 
+      </p>
+      
+      <p style="margin-top:10px;">
+        <ons-button onclick = "Grace()">Add Task</ons-button>
+      </p>
+
+
+    </div>
+  </ons-page>
+</ons-template>
+
+
+
+<script src="app.js"></script>a
+</body>
+</html>
